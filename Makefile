@@ -6,7 +6,7 @@
 #    By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 09:31:54 by jmartel           #+#    #+#              #
-#    Updated: 2019/01/16 15:45:59 by jmartel          ###   ########.fr        #
+#    Updated: 2019/01/16 16:37:38 by jmartel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,8 @@ SRCS	+= 	./s/00_launcher.c ./s/01_s_basic1.c ./s/02_s_basic2.c ./s/03_s_basic3.c
 SRCS	+=	./segf/00_launcher.c ./segf/01_segf1.c ./segf/02_segf2.c ./segf/03_segf3.c ./segf/04_segf4.c ./segf/05_segf5.c
 
 SRCS	+=	./return/00_launcher.c ./return/01_return1.c ./return/02_return2.c ./return/03_hard1.c
+
+SRCS	+=	./multiargs/00_launcher.c ./multiargs/01_multiargs1.c ./multiargs/02_multiargs2.c
 
 OBJ		= $(SRCS:.c=.o)
 

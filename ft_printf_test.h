@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 10:45:11 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/16 15:50:49 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/16 16:36:48 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,5 +145,13 @@ int			return_launcher(void);
 int			return1(void);
 int			return2(void);
 int			hard1(void);
+
+/*
+** multiargs :
+*/
+int			multiargs_launcher(void);
+int			multiargs1(void);
+int			multiargs2(void);
+
 
 #endif

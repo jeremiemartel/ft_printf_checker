@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/13 10:43:15 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/16 16:46:41 by jmartel          ###   ########.fr       */
+/*   Created: 2019/01/13 10:44:07 by jmartel           #+#    #+#             */
+/*   Updated: 2019/01/16 16:32:34 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include "ft_printf_test.h"
 
-int			main(void)
+int			multiargs_launcher(void)
 {
-	di_launcher();
-	c_launcher();
-	xx_launcher();
-	f_launcher();
-	u_launcher();
-	o_launcher();
-	s_launcher();
-	p_launcher();
-	nullprec_launcher();
-	segf_launcher();
-	return_launcher();
-	multiargs_launcher();
-	return (0);
+	t_test		*start;
+
+	start = NULL;
+	libunit_display_header("Testing with multiple arguments");
+	load_test(&start, "multiargs1 :    ", &(multiargs1));
+	load_test(&start, "multiargs2 :    ", &(multiargs2));
+	return (launch_test(start));	
 }
