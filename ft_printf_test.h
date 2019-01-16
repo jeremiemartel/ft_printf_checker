@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 10:45:11 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/15 13:50:32 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/16 15:50:49 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,5 +138,12 @@ int			segf3(void);
 int			segf4(void);
 int			segf5(void);
 
+/*
+** return :
+*/
+int			return_launcher(void);
+int			return1(void);
+int			return2(void);
+int			hard1(void);
 
 #endif

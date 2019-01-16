@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/13 10:43:15 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/16 15:46:59 by jmartel          ###   ########.fr       */
+/*   Created: 2019/01/13 10:44:07 by jmartel           #+#    #+#             */
+/*   Updated: 2019/01/16 15:50:37 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include "ft_printf_test.h"
 
-int			main(void)
+int			return_launcher(void)
 {
-	di_launcher();
-	c_launcher();
-	xx_launcher();
-	f_launcher();
-	u_launcher();
-	o_launcher();
-	s_launcher();
-	p_launcher();
-	nullprec_launcher();
-	segf_launcher();
-	return_launcher();
-	return (0);
+	t_test		*start;
+
+	start = NULL;
+	libunit_display_header("Testing return value");
+	load_test(&start, "return1 :    ", &(return1));
+	load_test(&start, "return2 :    ", &(return2));
+	load_test(&start, "hard1 :      ", &(hard1));
+	return (launch_test(start));	
 }
