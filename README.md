@@ -6,6 +6,7 @@ How to launch tests:
 
 
 How to use tester:
+
 	*	you can modify tests launched in main.c or in any 00_launcher.c file
 
 This tester cannot substitute manual tests and human correctors.
