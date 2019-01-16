@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 18:13:56 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/16 15:54:55 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/16 15:56:48 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int			hard1(void)
 	if (ans != cor)
 		exit (FAILURE);
 
-	ans = ft_printf("Okalmos : %12c %-5f %020d %#x", 'A', 1235.123, 0, 56985);
-	cor = dprintf(2, "Okalmos : %12c %-5f %020d %#x", 'A', 1235.123, 0, 56985);
+	ans = ft_printf("asd%c", 0);
+	cor = dprintf(2, "asd%c", 0);
 	if (ans != cor)
 		exit (FAILURE);
 
