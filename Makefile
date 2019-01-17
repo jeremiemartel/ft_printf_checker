@@ -56,29 +56,29 @@ CFLAGS	= -Wall -Werror -Wextra $(INCLUDES)
 all: libs libftprintf.a $(NAME)
 
 $(NAME): $(OBJ) $(LIB)
-	for i in $(LIBDIR); do (make -C $$i all); done
-	$(CC) -o $(NAME) $(CFLAGS) $(SRCS) $(LIBFLAG) libftprintf.a
+	@for i in $(LIBDIR); do (make -C $$i all); done
+	@$(CC) -o $(NAME) $(CFLAGS) $(SRCS) $(LIBFLAG) libftprintf.a && echo "\033[32mSuccessfully compiled $(NAME) \033[0m" 
 
 sanitize: $(OBJ) $(LIB)
-	for i in $(LIBDIR); do (make -C $$i all); done
-	$(CC) -o $(NAME) $(CFLAGS) -g3 -fsanitize=address  $(SRCS) $(LIBFLAG) libftprintf.a
+	@for i in $(LIBDIR); do (make -C $$i all); done
+	@$(CC) -o $(NAME) $(CFLAGS) -g3 -fsanitize=address  $(SRCS) $(LIBFLAG) libftprintf.a && echo "\033[32mSuccessfully compiled $(NAME) \033[0m"
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 libs:
-	for i in $(LIBDIR); do (make -C $$i all); done
+	@for i in $(LIBDIR); do (make -C $$i all); done
 
 libsre:
-	for i in $(LIBDIR); do (make -C $$i re); done
+	@for i in $(LIBDIR); do (make -C $$i re); done
 
 clean:
-	for i in $(LIBDIR); do (make -C $$i clean); done
-	rm -f $(OBJ)
+	@for i in $(LIBDIR); do (make -C $$i clean); done
+	@rm -f $(OBJ) && echo "\033[32mSuccessfully clean objects files \033[0m"
 
 fclean: clean
-	for i in $(LIBDIR); do (make -C $$i fclean); done
-	rm -f $(NAME)
+	@for i in $(LIBDIR); do (make -C $$i fclean); done
+	@rm -f $(NAME) && echo "\033[32mSuccessfully cleaned $(NAME) \033[0m"
 
 re: fclean libs $(NAME)
 
