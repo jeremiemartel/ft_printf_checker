@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 10:45:11 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/16 16:36:48 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/16 21:18:46 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ int			c_launcher(void);
 int			c_basic1(void);
 int			c_basic2(void);
 int			c_null(void);
+int			c_percent(void);
 
 /*
 ** u:

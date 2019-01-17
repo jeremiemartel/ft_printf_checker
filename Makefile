@@ -6,7 +6,7 @@
 #    By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 09:31:54 by jmartel           #+#    #+#              #
-#    Updated: 2019/01/16 16:37:38 by jmartel          ###   ########.fr        #
+#    Updated: 2019/01/16 21:19:35 by jmartel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS	+=	./xX/00_launcher.c ./xX/01_basic1.c ./xX/02_basic2.c ./xX/03_basic3.c ./
 
 SRCS	+=	./f/00_launcher.c ./f/01_basic1.c ./f/02_basic2.c ./f/03_basic3.c ./f/04_basic4.c ./f/05_basic5.c ./f/06_special1.c
 
-SRCS	+= 	./c/00_launcher.c ./c/01_c_basic1.c ./c/02_c_basic2.c ./c/03_c_basic3.c
+SRCS	+= 	./c/00_launcher.c ./c/01_c_basic1.c ./c/02_c_basic2.c ./c/03_c_basic3.c ./c/04_percent.c
 
 SRCS	+= ./prec/00_launcher.c ./prec/01_nullprec1.c ./prec/02_bigprec1.c ./prec/03_bigprec2.c ./prec/04_bigprec3.c ./prec/05_nullprec2.c ./prec/06_nullprec3.c ./prec/07_nullprec4.c ./prec/08_nullprec5.c
 
