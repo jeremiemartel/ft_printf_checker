@@ -6,7 +6,7 @@
 #    By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 09:31:54 by jmartel           #+#    #+#              #
-#    Updated: 2019/01/23 12:09:08 by jmartel          ###   ########.fr        #
+#    Updated: 2019/01/23 12:12:47 by jmartel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,10 @@ cp:
 $(NAME): $(OBJ) $(LIBNAME)
 	@make -C ./framework all
 	@$(CC) -o $(NAME) $(CFLAGS) $(OBJ) $(FRAMEW) $(LIBNAME) && echo "\033[32mSuccessfully compiled $(NAME) \033[0m"
+
+sanitize: $(OBJ) $(LIB)
+	@for i in $(LIBDIR); do (make -C $$i all); done
+	@$(CC) -o $(NAME) $(CFLAGS) -g3 -fsanitize=address  $(SRCS) $(LIBFLAG) libftprintf.a && echo "\033[32mSuccessfully compiled $(NAME) \033[0m"
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -o $@ -c $<
