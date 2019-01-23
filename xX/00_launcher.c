@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 10:44:07 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/14 16:21:20 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/23 10:23:00 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int			xx_launcher(void)
 	load_test(&start, "basic 3 (negatifs)", &(xx_basic3));
 	load_test(&start, "basic 4           ", &(xx_basic4));
 	load_test(&start, "cast 1            ", &(xx_cast1));
-	load_test(&start, "cast 1            ", &(xx_cast2));
-	load_test(&start, "cast 1            ", &(xx_cast3));
+	load_test(&start, "cast 2            ", &(xx_cast2));
+	load_test(&start, "cast 3            ", &(xx_cast3));
 	return (launch_test(start));	
 }
