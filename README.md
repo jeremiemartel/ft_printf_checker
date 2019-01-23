@@ -1,6 +1,6 @@
 How to launch tests:
 
-	*	Copy your libftprintf.a file in the root dir
+	*	Modify the variable LIBPATH in Makefile, with the path to your project
 
 	*	make && make test || make && ./libunit-test
 
