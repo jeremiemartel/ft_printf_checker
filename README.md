@@ -12,3 +12,6 @@ How to use tester:
 This tester cannot substitute manual tests and human correctors.
 
 For any issues or questions contact me on slack : jmartel, or by emails: jmartel@student.42.fr
+
+NB:
+I had some questions on what dprintf is and how are the tests made. So, here is the principle : I'm opening two pipes, on stdin and stderr, calling ft_printf and dprintf(2, ...), where dprintf is the version of ft_printf writing on any file descriptor. Then I'm just comparing the result, written in both pipes.
