@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 18:13:56 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/16 16:48:13 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/24 21:01:28 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int			multiargs1(void)
 	if (dup2(pipecor[1], 2) == -1)
 		exit(-1);
 
-	ft_printf("%X %o %s %x %d qdaze %c", -123, -432, "okqsd", 5643, 123654, 'S');
-	dprintf(2,"%X %o %s %x %d qdaze %c", -123, -432, "okqsd", 5643, 123654, 'S');
+	ft_printf("%X %12o %5s %x %d qdaze %c", -123, -432, "okqsd", 5643, 123654, 'S');
+	dprintf(2,"%X %12o %5s %x %d qdaze %c", -123, -432, "okqsd", 5643, 123654, 'S');
 
 	ft_printf("%X %o %s %x %d qdaze %c \n %c", 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W');
 	dprintf(2,"%X %o %s %x %d qdaze %c \n %c", 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W');
@@ -40,8 +40,8 @@ int			multiargs1(void)
 	ft_printf("%X %o %s %x %d qdaze %c \n %c", 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W');
 	dprintf(2,"%X %o %s %x %d qdaze %c \n %c", 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W');
 
-	ft_printf("%X %o %s %x %d qdaze %c \n %c %X %o %s %x %d qdaze %c \n %c", 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W', 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W');
-	dprintf(2,"%X %o %s %x %d qdaze %c \n %c %X %o %s %x %d qdaze %c \n %c", 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W', 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W');
+	ft_printf("%X %o %s %5x %d qdaze %5c \n %c %X %o %s %x %d qdaze %c \n %c", 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W', 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W');
+	dprintf(2,"%X %o %s %5x %d qdaze %5c \n %c %X %o %s %x %d qdaze %c \n %c", 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W', 1233, 123432, "okdsq qsqsd", 6542, -123654, 'U', 'W');
 
 	close(pipeans[1]);
 	close(pipecor[1]);

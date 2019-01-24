@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 18:13:56 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/16 16:51:35 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/24 21:02:27 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ int			multiargs2(void)
 	if (dup2(pipecor[1], 2) == -1)
 		exit(-1);
 
-	ft_printf("int : %d hex %x %lx ", INT_MAX, INT_MAX, LONG_MAX);
-	dprintf(2,"int : %d hex %x %lx ", INT_MAX, INT_MAX, LONG_MAX);
+	ft_printf("int : %12d hex %x %lx ", INT_MAX, INT_MAX, LONG_MAX);
+	dprintf(2,"int : %12d hex %x %lx ", INT_MAX, INT_MAX, LONG_MAX);
 
-	ft_printf("int : %d hex %x %lx int : %d hex %x %lx int : %d hex %x %lx int : %d hex %x %lx int : %d hex %x %lx ", INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX);
-	dprintf(2,"int : %d hex %x %lx int : %d hex %x %lx int : %d hex %x %lx int : %d hex %x %lx int : %d hex %x %lx ", INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX);
+	ft_printf("int : %1d hex %12x %lx int : %d hex %x %lx int : %d hex %x %lx int : %d hex %x %lx int : %d hex %x %lx ", INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX);
+	dprintf(2,"int : %1d hex %12x %lx int : %d hex %x %lx int : %d hex %x %lx int : %d hex %x %lx int : %d hex %x %lx ", INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX, INT_MAX, INT_MAX, LONG_MAX);
 
 
 	close(pipeans[1]);
