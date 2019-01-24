@@ -6,11 +6,11 @@
 #    By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 09:31:54 by jmartel           #+#    #+#              #
-#    Updated: 2019/01/24 12:24:13 by jmartel          ###   ########.fr        #
+#    Updated: 2019/01/24 12:30:48 by jmartel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIBPATH	= ../GitHub/libftprintf/
+LIBPATH	= .
 LIBNAME	= libftprintf.a
 
 NAME	= libunit-test
