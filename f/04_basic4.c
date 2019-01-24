@@ -6,14 +6,14 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 10:46:53 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/14 16:46:01 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/24 21:08:52 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include "ft_printf_test.h"
 
-int			f_basic4(void)
+int			test_f_basic4(void)
 {
 	int		pipeans[2];
 	int		pipecor[2];
@@ -121,3 +121,40 @@ int			f_basic4(void)
 		exit (SUCCESS);
 	exit(FAILURE);
 }
+
+int			f_basic4(void)
+{
+	pid_t	pid_test;
+	int		pipefd[2];
+	int		wait_res;
+	pid_t	pid_timeout;
+	pid_t	first_pid;
+
+	if (pipe(pipefd) == -1)
+		exit(-1);
+	if ((pid_test = fork()) == -1)
+		exit(FAILURE);
+	if (pid_test == 0)
+		exit(test_f_basic4());
+	if ((pid_timeout = fork()) == -1)
+		exit(FAILURE);
+	if (pid_timeout == 0)
+	{
+		sleep(TIMEOUT_F);
+		exit(SIGUSR1);
+	}
+	else
+	{
+		first_pid = wait(&wait_res);
+		if (first_pid == pid_timeout)
+		{
+			kill(pid_test, SIGKILL);
+			return (FAILURE);
+		}
+		kill(pid_timeout, SIGKILL);
+		if (wait_res == SUCCESS)
+			return(SUCCESS);
+		return (FAILURE);
+	}
+}
+

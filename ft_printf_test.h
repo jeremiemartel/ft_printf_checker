@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 10:45:11 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/24 12:24:23 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/24 21:06:51 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int			ft_printf(const char * restrict format, ...);
 # include <limits.h>
 
 # define READING_SIZE	3000
+# define TIMEOUT_F		1
 
 /*
 ** di:
