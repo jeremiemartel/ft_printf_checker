@@ -6,7 +6,7 @@
 #    By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 09:31:54 by jmartel           #+#    #+#              #
-#    Updated: 2019/01/24 12:30:48 by jmartel          ###   ########.fr        #
+#    Updated: 2019/01/24 21:10:30 by jmartel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ all: cp $(NAME)
 
 cp:
 	@rm -f $(LIBNAME)
-	@make -C $(LIBPATH) all
+#	@make -C $(LIBPATH) all
 	@cp $(LIBPATH)$(LIBNAME) .
 	@if [ -a $(LIBNAME) ]; then echo "\033[32mSuccessfully copied your $(LIBNAME) \033[0m"; else echo "\033[30mCannot copy your $(LIBNAME) check LIBPATH and LIBNAME variables\033[0m"; fi
 
@@ -54,9 +54,9 @@ $(NAME): $(OBJ) $(LIBNAME)
 	@make -C ./framework all
 	@$(CC) -o $(NAME) $(CFLAGS) $(OBJ) $(FRAMEW) $(LIBNAME) && echo "\033[32mSuccessfully compiled $(NAME) \033[0m"
 
-sanitize: $(OBJ) $(LIB)
-	@for i in $(LIBDIR); do (make -C $$i all); done
-	@$(CC) -o $(NAME) $(CFLAGS) -g3 -fsanitize=address  $(SRCS) $(LIBFLAG) libftprintf.a && echo "\033[32mSuccessfully compiled $(NAME) \033[0m"
+sanitize: $(OBJ) $(LIBNAME)
+	@make -C ./framework all
+	@$(CC) -o $(NAME) $(CFLAGS) -g3 -fsanitize=address  $(SRCS) $(LIBFLAG) libftprintf.a && echo "\033[32mSuccessfully compiled $(NAME) with fsanitize=address\033[0m"
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -o $@ -c $<
