@@ -6,7 +6,7 @@
 #    By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 09:31:54 by jmartel           #+#    #+#              #
-#    Updated: 2019/01/23 12:13:11 by jmartel          ###   ########.fr        #
+#    Updated: 2019/01/24 12:24:13 by jmartel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ NAME	= libunit-test
 SRCS	+= ./main.c
 SRCS	+= 	./di/00_launcher.c ./di/01_di_basic1.c ./di/02_di_basic2.c ./di/03_di_basic3.c ./di/04_di_basic4.c ./di/05_di_basic5.c ./di/06_di_cast1.c ./di/07_di_cast2.c ./di/08_di_cast3.c ./di/09_di_cast4.c ./di/10_di_hard1.c
 SRCS	+=	./xX/00_launcher.c ./xX/01_basic1.c ./xX/02_basic2.c ./xX/03_basic3.c ./xX/04_basic4.c ./xX/05_cast1.c ./xX/06_cast2.c ./xX/07_cast3.c
-SRCS	+=	./f/00_launcher.c ./f/01_basic1.c ./f/02_basic2.c ./f/03_basic3.c ./f/04_basic4.c ./f/05_basic5.c ./f/06_special1.c
+SRCS	+=	./f/00_launcher.c ./f/01_basic1.c ./f/02_basic2.c ./f/03_basic3.c ./f/04_basic4.c ./f/05_basic5.c ./f/06_special1.c ./f/07_special2.c
 SRCS	+= 	./c/00_launcher.c ./c/01_c_basic1.c ./c/02_c_basic2.c ./c/03_c_basic3.c ./c/04_percent.c
 SRCS	+= ./prec/00_launcher.c ./prec/01_nullprec1.c ./prec/02_bigprec1.c ./prec/03_bigprec2.c ./prec/04_bigprec3.c ./prec/05_nullprec2.c ./prec/06_nullprec3.c ./prec/07_nullprec4.c ./prec/08_nullprec5.c
 SRCS	+= 	./u/00_launcher.c ./u/01_u_basic1.c ./u/02_u_basic2.c ./u/03_u_basic3.c ./u/04_u_basic4.c ./u/05_u_basic5.c
@@ -47,7 +47,7 @@ all: cp $(NAME)
 cp:
 	@rm -f $(LIBNAME)
 	@make -C $(LIBPATH) all
-	@yes | cp $(LIBPATH)$(LIBNAME) .
+	@cp $(LIBPATH)$(LIBNAME) .
 	@if [ -a $(LIBNAME) ]; then echo "\033[32mSuccessfully copied your $(LIBNAME) \033[0m"; else echo "\033[30mCannot copy your $(LIBNAME) check LIBPATH and LIBNAME variables\033[0m"; fi
 
 $(NAME): $(OBJ) $(LIBNAME)

@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 10:45:11 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/16 21:18:46 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/24 12:24:23 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int			f_basic3(void);
 int			f_basic4(void);
 int			f_basic5(void);
 int			f_special1(void);
+int			f_special2(void);
 
 /*
 ** c:
