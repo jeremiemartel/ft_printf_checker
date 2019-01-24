@@ -6,7 +6,7 @@
 /*   By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/13 10:46:53 by jmartel           #+#    #+#             */
-/*   Updated: 2019/01/15 13:53:58 by jmartel          ###   ########.fr       */
+/*   Updated: 2019/01/24 12:27:12 by jmartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int			f_special1(void)
 
 	double		nb;
 
-    nb = 0.0/1.0;
+    nb = 1.0/0.0;
 	ft_printf("%f\n", nb);
 	dprintf(2,"%f\n", nb);
 	ft_printf("%12f\n", nb);
@@ -44,7 +44,7 @@ int			f_special1(void)
 	ft_printf("%5.9f\n", nb);
 	dprintf(2,"%5.9f\n", nb);
 
-    nb = -0.0/1.0;
+    nb = -1.0/0.0;
 	ft_printf("%f\n", nb);
 	dprintf(2,"%f\n", nb);
 	ft_printf("%12f\n", nb);
