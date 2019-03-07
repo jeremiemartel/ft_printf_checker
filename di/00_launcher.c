@@ -26,8 +26,8 @@ int			di_launcher(void)
 	load_test(&start, "basic 5 (56432)  ", &(di_basic5));
 	load_test(&start, "cast 1 (l)       ", &(di_cast1));
 	load_test(&start, "cast 2 (ll)      ", &(di_cast2));
-	load_test(&start, "cast 3 (h)       ", &(di_cast3));
-	load_test(&start, "cast 4 (hh)      ", &(di_cast4));
+	load_test(&start, "cast 3 (hh)      ", &(di_cast3));
+	load_test(&start, "cast 4 (h)       ", &(di_cast4));
 	load_test(&start, "hard 1           ", &(di_hard1));
 	return (launch_test(start));	
 }
