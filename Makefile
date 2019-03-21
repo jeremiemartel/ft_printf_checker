@@ -6,7 +6,7 @@
 #    By: jmartel <jmartel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 09:31:54 by jmartel           #+#    #+#              #
-#    Updated: 2019/01/24 21:10:30 by jmartel          ###   ########.fr        #
+#    Updated: 2019/03/21 16:14:35 by jmartel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ all: cp $(NAME)
 
 cp:
 	@rm -f $(LIBNAME)
-#	@make -C $(LIBPATH) all
+	@make -C $(LIBPATH)
 	@cp $(LIBPATH)$(LIBNAME) .
 	@if [ -a $(LIBNAME) ]; then echo "\033[32mSuccessfully copied your $(LIBNAME) \033[0m"; else echo "\033[30mCannot copy your $(LIBNAME) check LIBPATH and LIBNAME variables\033[0m"; fi
 
