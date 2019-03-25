@@ -20,9 +20,9 @@ int			segf_launcher(void)
 	start = NULL;
 	libunit_display_header("trying to segf");
 	load_test(&start, "segf1 : maj conv                      ", &(segf1));
-	load_test(&start, "segf2 : NULL param (optionnal)        ", &(segf2));
+	load_test(&start, "segf2 : NULL param (optional)         ", &(segf2));
 	load_test(&start, "segf3 : too much params               ", &(segf3));
-	load_test(&start, "segf4 : not enough params (optionnal)", &(segf4));
-	load_test(&start, "segf5 : NULL param (optionnal)        ", &(segf5));
+	load_test(&start, "segf4 : not enough params (optional)  ", &(segf4));
+	load_test(&start, "segf5 : NULL param (optional)         ", &(segf5));
 	return (launch_test(start));	
 }
