@@ -44,7 +44,7 @@ int			xx_basic3(void)
 	ft_printf("Prec + minus:%-.5X", nb);
 	ft_printf("size:%5X", nb);
 	ft_printf("size + prec:%7.3X", nb);
-	ft_printf("size + mminus:%-5X", nb);
+	ft_printf("size + minus:%-5X", nb);
 	ft_printf("size + 0:%05X", nb);
 	ft_printf("size + 0 + hash:%#05X", nb);
 	ft_printf("size + 0 + prec:%05.3X", nb);
@@ -63,7 +63,7 @@ int			xx_basic3(void)
 	dprintf(2, "Prec + minus:%-.5X", nb);
 	dprintf(2, "size:%5X", nb);
 	dprintf(2, "size + prec:%7.3X", nb);
-	dprintf(2, "size + mminus:%-5X", nb);
+	dprintf(2, "size + minus:%-5X", nb);
 	dprintf(2, "size + 0:%05X", nb);
 	dprintf(2, "size + 0 + hash:%#05X", nb);
 	dprintf(2, "size + 0 + prec:%05.3X", nb);
